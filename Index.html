@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SAP Platform | Intelligent Enterprise</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style2.css"/>
+</head>
+<body>
+  <div>hello</div>
+
+<!-- ======== NAVBAR ======== -->
+<nav id="mainNav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#" onclick="goHome()">
+      <span class="brand-logo">SAP</span>
+      <span class="brand-pipe">|</span>
+      <span class="brand-text">Platform</span>
+    </a>
+    <ul class="nav-menu" id="navMenu">
+
+      <!-- EXPLORE US -->
+      <li class="has-mega">
+        <button class="nav-btn">Explore Us <i class="bi bi-chevron-down nav-chev"></i></button>
+        <div class="mega-panel">
+          <div class="mega-body">
+            <div class="mega-left"><span class="mega-head-title">Explore Us</span></div>
+            <div class="mega-right">
+              <div class="mega-card-grid">
+                <a class="mcard" onclick="showDetail('about-us')"><b>About SAP Platform</b><span>Unveiling our 20+ years journey to Digital Excellence</span></a>
+                <a class="mcard" onclick="showDetail('leadership')"><b>Leadership</b><span>Guiding Visions, Sculpting Success: Our Leadership Story</span></a>
+                <a class="mcard" onclick="showDetail('awards')"><b>Awards & Achievements</b><span>Championing our Success: Our Journey, Our Triumphs!</span></a>
+                <a class="mcard" onclick="showDetail('commitment')"><b>Commitment To People</b><span>More Than Just Words: A Cultural Commitment</span></a>
+                <a class="mcard" onclick="showDetail('clients')"><b>How We Work With Clients</b><span>Crafting innovative solutions for your Digital Needs</span></a>
+                <a class="mcard" onclick="showDetail('investors')"><b>Investor Relations</b><span>Earning Investor trust, Fueling Growth Beyond Expectations</span></a>
+                <a class="mcard" onclick="showDetail('analyst')"><b>Analyst Recognitions</b><span>Spotlighting Our Top Analyst-acclaimed Expertise</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- SERVICES -->
+      <li class="has-mega">
+        <button class="nav-btn">Services <i class="bi bi-chevron-down nav-chev"></i></button>
+        <div class="mega-panel">
+          <div class="mega-body">
+            <div class="mega-left"><span class="mega-head-title">Our Services</span></div>
+            <div class="mega-right">
+              <div class="mega-col-grid">
+                <div class="mcol">
+                  <div class="mcol-title">Enterprise Application</div>
+                  <a class="mlink" onclick="showDetail('eos')">EOS Transformation</a>
+                  <a class="mlink" onclick="showDetail('s4hana')">SAP S/4HANA</a>
+                  <a class="mlink" onclick="showDetail('rise-sap')">RISE with SAP</a>
+                  <a class="mlink" onclick="showDetail('grow-sap')">GROW with SAP</a>
+                  <a class="mlink" onclick="showDetail('ams')">Application Management Services</a>
+                  <div class="mcol-title mt-2">Operations</div>
+                  <a class="mlink" onclick="showDetail('supply-chain')">Supply Chain Transformation</a>
+                  <a class="mlink" onclick="showDetail('procurement')">Procurement Transformation</a>
+                  <a class="mlink" onclick="showDetail('finance-trans')">Finance Transformation</a>
+                </div>
+                <div class="mcol">
+                  <div class="mcol-title">Digital Services</div>
+                  <a class="mlink" onclick="showDetail('cloud-trans')">Cloud Transformation</a>
+                  <a class="mlink" onclick="showDetail('btp')">Business Technology Platform</a>
+                  <a class="mlink" onclick="showDetail('spend-mgmt')">Spend Management</a>
+                  <div class="mcol-title mt-2">Digiverz</div>
+                  <a class="mlink" onclick="showDetail('data-eng')">Data Engineering & Science</a>
+                  <a class="mlink" onclick="showDetail('product-eng')">Product Engineering</a>
+                  <a class="mlink" onclick="showDetail('cloud-eng')">Cloud Engineering</a>
+                  <a class="mlink" onclick="showDetail('bpm')">Business Process Management</a>
+                </div>
+                <div class="mcol">
+                  <div class="mcol-title">Performance Services</div>
+                  <a class="mlink" onclick="showDetail('cx-trans')">CX Transformation</a>
+                  <a class="mlink" onclick="showDetail('hr-trans')">HR Transformation</a>
+                  <a class="mlink" onclick="showDetail('ehs')">Environment, Health & Safety</a>
+                  <a class="mlink" onclick="showDetail('ocm')">Organizational Change Mgmt</a>
+                  <div class="mcol-title mt-2">Business Platforms</div>
+                  <a class="mlink" onclick="showDetail('biz-analytics')">Business Analytics</a>
+                  <a class="mlink" onclick="showDetail('dcp')">Digital Customer Platforms</a>
+                  <a class="mlink" onclick="showDetail('liferay')">Liferay</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- INDUSTRIES -->
+      <li class="has-mega">
+        <button class="nav-btn">Industries <i class="bi bi-chevron-down nav-chev"></i></button>
+        <div class="mega-panel">
+          <div class="mega-body">
+            <div class="mega-left"><span class="mega-head-title">Our Industries</span></div>
+            <div class="mega-right">
+              <div class="mega-col-grid">
+                <div class="mcol">
+                  <div class="mcol-title">Discrete</div>
+                  <a class="mlink" onclick="showDetail('high-tech')">High Tech</a>
+                  <a class="mlink" onclick="showDetail('ind-mfg')">Industrial Manufacturing</a>
+                  <a class="mlink" onclick="showDetail('aerospace')">Aerospace & Defense</a>
+                  <a class="mlink" onclick="showDetail('automotive')">Automotive</a>
+                  <div class="mcol-title mt-2">Consumer</div>
+                  <a class="mlink" onclick="showDetail('consumer-prod')">Consumer Products</a>
+                  <a class="mlink" onclick="showDetail('wholesale')">Wholesale Distribution</a>
+                  <a class="mlink" onclick="showDetail('life-science')">Life Science</a>
+                  <a class="mlink" onclick="showDetail('retail')">Retail</a>
+                </div>
+                <div class="mcol">
+                  <div class="mcol-title">Energy & Natural Resources</div>
+                  <a class="mlink" onclick="showDetail('chemicals')">Chemicals</a>
+                  <a class="mlink" onclick="showDetail('oil-gas')">Oil, Gas & Energy</a>
+                  <a class="mlink" onclick="showDetail('mill')">Mill Products</a>
+                  <a class="mlink" onclick="showDetail('utilities')">Utilities</a>
+                  <div class="mcol-title mt-2">Public Services</div>
+                  <a class="mlink" onclick="showDetail('healthcare')">Health Care</a>
+                  <a class="mlink" onclick="showDetail('higher-edu')">Higher Education</a>
+                  <a class="mlink" onclick="showDetail('govt')">Federal & National Government</a>
+                </div>
+                <div class="mcol">
+                  <div class="mcol-title">Services</div>
+                  <a class="mlink" onclick="showDetail('prof-services')">Professional Services</a>
+                  <a class="mlink" onclick="showDetail('transport')">Transport & Logistics</a>
+                  <a class="mlink" onclick="showDetail('eco')">Engineering, Construction & Ops</a>
+                  <a class="mlink" onclick="showDetail('travel')">Passenger Travel & Leisure</a>
+                  <div class="mcol-title mt-2">Financial Services</div>
+                  <a class="mlink" onclick="showDetail('banking')">Banking</a>
+                  <a class="mlink" onclick="showDetail('insurance')">Insurance</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- INNOVATION -->
+      <li class="has-mega">
+        <button class="nav-btn">Innovation <i class="bi bi-chevron-down nav-chev"></i></button>
+        <div class="mega-panel">
+          <div class="mega-body">
+            <div class="mega-left"><span class="mega-head-title">Innovation</span></div>
+            <div class="mega-right">
+              <div class="mega-card-grid" style="grid-template-columns:repeat(3,1fr)">
+                <a class="mcard" onclick="showDetail('ktern')"><b>KTern.AI</b><span>Accelerate, optimize, govern for successful SAP investments</span></a>
+                <a class="mcard" onclick="showDetail('kebs')"><b>KEBS</b><span>Unified solution integrating key departments for business efficiency</span></a>
+                <a class="mcard" onclick="showDetail('technologies')"><b>Technologies</b><span>Authorized reseller and trusted partner for leading enterprise technologies</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- INSIGHTS -->
+      <li class="has-mega">
+        <button class="nav-btn">Insights <i class="bi bi-chevron-down nav-chev"></i></button>
+        <div class="mega-panel">
+          <div class="mega-body">
+            <div class="mega-left"><span class="mega-head-title">Insights</span></div>
+            <div class="mega-right">
+              <div class="mega-col-grid">
+                <div class="mcol">
+                  <div class="mcol-title">Knowledge Hub</div>
+                  <a class="mlink" onclick="showDetail('blog')">Blog & Articles</a>
+                  <a class="mlink" onclick="showDetail('whitepapers')">Whitepapers</a>
+                  <a class="mlink" onclick="showDetail('case-studies')">Case Studies</a>
+                  <a class="mlink" onclick="showDetail('research')">Research Reports</a>
+                </div>
+                <div class="mcol">
+                  <div class="mcol-title">Events & Media</div>
+                  <a class="mlink" onclick="showDetail('webinars')">Webinars</a>
+                  <a class="mlink" onclick="showDetail('events')">Events & Conferences</a>
+                  <a class="mlink" onclick="showDetail('videos')">Videos & Podcasts</a>
+                  <a class="mlink" onclick="showDetail('press')">Press Releases</a>
+                </div>
+                <div class="mcol">
+                  <div class="mcol-title">Trending</div>
+                  <a class="mlink" onclick="showDetail('gen-ai')">Generative AI in ERP</a>
+                  <a class="mlink" onclick="showDetail('cloud-migration')">Cloud Migration</a>
+                  <a class="mlink" onclick="showDetail('s4hana-trends')">SAP S/4HANA Trends</a>
+                  <a class="mlink" onclick="showDetail('sustainability')">Sustainability</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- CAREERS -->
+      <li class="has-mega">
+        <button class="nav-btn">Careers <i class="bi bi-chevron-down nav-chev"></i></button>
+        <div class="mega-panel">
+          <div class="mega-body">
+            <div class="mega-left"><span class="mega-head-title">Careers</span></div>
+            <div class="mega-right">
+              <div class="mega-col-grid">
+                <div class="mcol">
+                  <div class="mcol-title">Join Our Team</div>
+                  <a class="mlink" onclick="showDetail('open-positions')">Open Positions</a>
+                  <a class="mlink" onclick="showDetail('life-at-sap')">Life at SAP Platform</a>
+                  <a class="mlink" onclick="showDetail('benefits')">Employee Benefits</a>
+                  <a class="mlink" onclick="showDetail('diversity')">Diversity & Inclusion</a>
+                </div>
+                <div class="mcol">
+                  <div class="mcol-title">Programs</div>
+                  <a class="mlink" onclick="showDetail('graduate')">Graduate Program</a>
+                  <a class="mlink" onclick="showDetail('internship')">Internship Program</a>
+                  <a class="mlink" onclick="showDetail('leadership-dev')">Leadership Development</a>
+                  <a class="mlink" onclick="showDetail('sap-cert')">SAP Certification Support</a>
+                </div>
+                <div class="mcol">
+                  <div class="mcol-title">Why Work With Us</div>
+                  <a class="mlink" onclick="showDetail('culture')">Our Culture</a>
+                  <a class="mlink" onclick="showDetail('learning')">Learning & Growth</a>
+                  <a class="mlink" onclick="showDetail('global-ops')">Global Opportunities</a>
+                  <a class="mlink" onclick="showDetail('employer-awards')">Awards as Employer</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="nav-cta">
+      <button class="btn-contact" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</button>
+    </div>
+    <button class="btn-region"><i class="bi bi-globe2"></i> Region <i class="bi bi-chevron-down" style="font-size:.58rem"></i></button>
+    <button class="mob-toggle" id="mobToggle"><i class="bi bi-list" id="mobIcon"></i></button>
+    <!-- <button class="mob-toggle" id="mobToggle"><i class="bi bi-list" id="mobIcon"></i></button> -->
+  </div>
+</nav>
+
+<!-- ======== HOME PAGE ======== -->
+<div id="homePage" class="page-section active">
+
+  <!-- HERO -->
+  <section class="hero-sec">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-orb o1"></div>
+    <div class="hero-orb o2"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center" style="min-height:100vh">
+        <div class="col-lg-6 py-5">
+          <h1 class="hero-h1">Run Your Business<br><span class="txt-grad">Smarter. Faster.</span><br>Together.</h1>
+          <p class="hero-p">SAP delivers intelligent enterprise solutions that connect every process, every person, and every insight — in real time, across your entire organization.</p>
+          <div class="hero-btns">
+            <button class="btn-blue" onclick="document.getElementById('solutionsSec').scrollIntoView({behavior:'smooth'})">Explore Solutions <i class="bi bi-arrow-right"></i></button>
+            <button class="btn-out-w"><i class="bi bi-play-circle me-1"></i>Watch Demo</button>
+          </div>
+          <div class="hero-stats">
+            <div class="hstat"><span class="hnum" data-count="440">0</span><span class="hnum">K+</span><p>Customers</p></div>
+            <div class="hstat-div"></div>
+            <div class="hstat"><span class="hnum" data-count="180">0</span><span class="hnum">+</span><p>Countries</p></div>
+            <div class="hstat-div"></div>
+            <div class="hstat"><span class="hnum" data-count="99">0</span><span class="hnum">%</span><p>Fortune 500</p></div>
+          </div>
+        </div>
+        <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center">
+          <div class="dash-wrap">
+            <div class="dash-card">
+              <div class="dc-top"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span><span class="dc-label">SAP Analytics Cloud</span></div>
+              <div class="dc-bars">
+                <div class="dbar" style="--h:62%;--c:#0070f3"><span>Q1</span></div>
+                <div class="dbar" style="--h:85%;--c:#00b4d8"><span>Q2</span></div>
+                <div class="dbar" style="--h:47%;--c:#0070f3"><span>Q3</span></div>
+                <div class="dbar" style="--h:93%;--c:#00d4aa"><span>Q4</span></div>
+                <div class="dbar" style="--h:68%;--c:#00b4d8"><span>Q5</span></div>
+                <div class="dbar" style="--h:78%;--c:#0070f3"><span>Q6</span></div>
+              </div>
+              <div class="dc-meta">
+                <span><i class="bi bi-arrow-up-right text-success"></i> Revenue <b>+23%</b></span>
+                <span><i class="bi bi-people-fill text-info"></i> Users <b>12.4K</b></span>
+              </div>
+            </div>
+            <div class="flt-card fc1"><i class="bi bi-cpu-fill"></i><div><b>AI Insights</b><small>Predictive Analytics Active</small></div></div>
+            <div class="flt-card fc2"><i class="bi bi-shield-check-fill"></i><div><b>Security</b><small>Enterprise Grade</small></div></div>
+            <div class="flt-card fc3"><i class="bi bi-cloud-arrow-up-fill"></i><div><b>Cloud Ready</b><small>99.9% Uptime</small></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUSTED -->
+  <section class="trust-sec">
+    <div class="container">
+      <p class="trust-lbl">Trusted by the world's leading companies</p>
+      <div class="logos-track"><div class="logos-slide">
+        <span>Microsoft</span><span>Siemens</span><span>Nestlé</span><span>ExxonMobil</span><span>Bayer</span><span>BMW</span><span>Unilever</span><span>Shell</span><span>Deloitte</span><span>Airbus</span>
+        <span>Microsoft</span><span>Siemens</span><span>Nestlé</span><span>ExxonMobil</span><span>Bayer</span><span>BMW</span><span>Unilever</span><span>Shell</span><span>Deloitte</span><span>Airbus</span>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- SOLUTIONS -->
+  <section class="content-sec" id="solutionsSec">
+    <div class="container">
+      <div class="sec-hd text-center">
+        <span class="sec-tag">Our Solutions</span>
+        <h2 class="sec-h2">Everything Your Enterprise Needs</h2>
+        <p class="sec-sub">Integrated, intelligent, and built for scale — SAP solutions cover every corner of your business.</p>
+      </div>
+      <div class="row g-4 mt-2">
+        <div class="col-md-6 col-lg-4"><div class="sol-card" data-accent="#0070f3" onclick="showDetail('s4hana')"><div class="sol-ico"><i class="bi bi-bar-chart-line-fill"></i></div><h4>SAP S/4HANA</h4><p>Next-gen ERP with real-time analytics and AI-powered automation for core business processes.</p><button class="learn-link">Learn more <i class="bi bi-arrow-right"></i></button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="sol-card" data-accent="#00b4d8" onclick="showDetail('hr-trans')"><div class="sol-ico"><i class="bi bi-people-fill"></i></div><h4>SAP SuccessFactors</h4><p>Transform HR operations with cloud-based human capital management for the modern workforce.</p><button class="learn-link">Learn more <i class="bi bi-arrow-right"></i></button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="sol-card" data-accent="#00d4aa" onclick="showDetail('procurement')"><div class="sol-ico"><i class="bi bi-truck-front-fill"></i></div><h4>SAP Ariba</h4><p>Streamline procurement and supply chain with intelligent sourcing and spend analysis.</p><button class="learn-link">Learn more <i class="bi bi-arrow-right"></i></button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="sol-card" data-accent="#f97316" onclick="showDetail('biz-analytics')"><div class="sol-ico"><i class="bi bi-graph-up-arrow"></i></div><h4>SAP Analytics Cloud</h4><p>Business intelligence, planning, and predictive analytics in one unified cloud platform.</p><button class="learn-link">Learn more <i class="bi bi-arrow-right"></i></button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="sol-card" data-accent="#8b5cf6" onclick="showDetail('ktern')"><div class="sol-ico"><i class="bi bi-robot"></i></div><h4>SAP Business AI</h4><p>Embed AI across every business process — from automation to intelligent recommendations.</p><button class="learn-link">Learn more <i class="bi bi-arrow-right"></i></button></div></div>
+        <div class="col-md-6 col-lg-4"><div class="sol-card" data-accent="#f59e0b" onclick="showDetail('btp')"><div class="sol-ico"><i class="bi bi-cloud-fill"></i></div><h4>SAP BTP</h4><p>Business Technology Platform to integrate, extend, and build cloud-native applications at scale.</p><button class="learn-link">Learn more <i class="bi bi-arrow-right"></i></button></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT TABS -->
+  <section class="content-sec bg-alt">
+    <div class="container">
+      <div class="sec-hd text-center">
+        <span class="sec-tag">Products</span>
+        <h2 class="sec-h2">Explore Our Product Suite</h2>
+        <p class="sec-sub">Choose the right SAP product for your business needs.</p>
+      </div>
+      <div class="ptabs-wrapper mt-4">
+        <div class="ptabs-nav">
+          <div class="ptab active" data-tab="erp"><i class="bi bi-layers-fill"></i><div><strong>ERP & Finance</strong><small>Core business operations</small></div></div>
+          <div class="ptab" data-tab="crm"><i class="bi bi-headset"></i><div><strong>CRM & Customer</strong><small>Customer experience</small></div></div>
+          <div class="ptab" data-tab="scm"><i class="bi bi-diagram-3-fill"></i><div><strong>Supply Chain</strong><small>End-to-end visibility</small></div></div>
+          <div class="ptab" data-tab="hr"><i class="bi bi-person-badge-fill"></i><div><strong>Human Resources</strong><small>Workforce management</small></div></div>
+        </div>
+        <div class="ptabs-body">
+          <div class="ptab-content active" id="tab-erp">
+            <h3>SAP S/4HANA Cloud — ERP & Finance</h3>
+            <p>Accelerate digital transformation with the most advanced cloud ERP. SAP S/4HANA delivers real-time financial insights and empowers faster, smarter decisions.</p>
+            <ul class="feat-ul"><li><i class="bi bi-check-circle-fill"></i>Real-time financial reporting & consolidation</li><li><i class="bi bi-check-circle-fill"></i>Automated accounts payable & receivable</li><li><i class="bi bi-check-circle-fill"></i>Advanced treasury & cash management</li><li><i class="bi bi-check-circle-fill"></i>Built-in compliance & risk management</li></ul>
+            <button class="btn-red mt-3" onclick="showDetail('s4hana')">Explore S/4HANA <i class="bi bi-arrow-right"></i></button>
+          </div>
+          <div class="ptab-content" id="tab-crm">
+            <h3>SAP Sales & Service Cloud — CRM</h3>
+            <p>Deliver exceptional customer experiences. Connect every touchpoint across the customer journey with AI-powered insights and omnichannel capabilities.</p>
+            <ul class="feat-ul"><li><i class="bi bi-check-circle-fill"></i>360° customer view across all channels</li><li><i class="bi bi-check-circle-fill"></i>AI-driven sales forecasting</li><li><i class="bi bi-check-circle-fill"></i>Omnichannel service & support</li><li><i class="bi bi-check-circle-fill"></i>Marketing campaign management</li></ul>
+            <button class="btn-red mt-3" onclick="showDetail('cx-trans')">Explore CRM <i class="bi bi-arrow-right"></i></button>
+          </div>
+          <div class="ptab-content" id="tab-scm">
+            <h3>SAP Integrated Business Planning — Supply Chain</h3>
+            <p>Gain end-to-end supply chain visibility and resilience. Connect demand, supply, and logistics for optimal performance and agility.</p>
+            <ul class="feat-ul"><li><i class="bi bi-check-circle-fill"></i>Demand-driven replenishment planning</li><li><i class="bi bi-check-circle-fill"></i>Real-time inventory optimization</li><li><i class="bi bi-check-circle-fill"></i>Supplier collaboration & risk management</li><li><i class="bi bi-check-circle-fill"></i>Logistics & transportation management</li></ul>
+            <button class="btn-red mt-3" onclick="showDetail('supply-chain')">Explore Supply Chain <i class="bi bi-arrow-right"></i></button>
+          </div>
+          <div class="ptab-content" id="tab-hr">
+            <h3>SAP SuccessFactors — Human Resources</h3>
+            <p>Build a future-ready workforce. Manage every stage of the employee lifecycle with AI-powered tools from recruiting to retirement.</p>
+            <ul class="feat-ul"><li><i class="bi bi-check-circle-fill"></i>Intelligent recruiting & onboarding</li><li><i class="bi bi-check-circle-fill"></i>Continuous performance management</li><li><i class="bi bi-check-circle-fill"></i>Learning & development platforms</li><li><i class="bi bi-check-circle-fill"></i>Global payroll & benefits administration</li></ul>
+            <button class="btn-red mt-3" onclick="showDetail('hr-trans')">Explore SuccessFactors <i class="bi bi-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section class="content-sec">
+    <div class="container">
+      <div class="sec-hd text-center">
+        <span class="sec-tag">Industries</span>
+        <h2 class="sec-h2">Built for Your Industry</h2>
+        <p class="sec-sub">SAP delivers industry-specific solutions tailored to your unique challenges.</p>
+      </div>
+      <div class="row g-3 mt-2">
+        <div class="col-6 col-md-4 col-lg-3"><div class="ind-card" onclick="showDetail('banking')"><i class="bi bi-bank2"></i><span>Banking & Finance</span></div></div>
+        <div class="col-6 col-md-4 col-lg-3"><div class="ind-card" onclick="showDetail('healthcare')"><i class="bi bi-heart-pulse-fill"></i><span>Healthcare</span></div></div>
+        <div class="col-6 col-md-4 col-lg-3"><div class="ind-card" onclick="showDetail('ind-mfg')"><i class="bi bi-gear-wide-connected"></i><span>Manufacturing</span></div></div>
+        <div class="col-6 col-md-4 col-lg-3"><div class="ind-card" onclick="showDetail('retail')"><i class="bi bi-shop-window"></i><span>Retail</span></div></div>
+        <div class="col-6 col-md-4 col-lg-3"><div class="ind-card" onclick="showDetail('oil-gas')"><i class="bi bi-fuel-pump-fill"></i><span>Energy & Utilities</span></div></div>
+        <div class="col-6 col-md-4 col-lg-3"><div class="ind-card" onclick="showDetail('aerospace')"><i class="bi bi-airplane-fill"></i><span>Aerospace</span></div></div>
+        <div class="col-6 col-md-4 col-lg-3"><div class="ind-card" onclick="showDetail('govt')"><i class="bi bi-building-fill"></i><span>Public Sector</span></div></div>
+        <div class="col-6 col-md-4 col-lg-3"><div class="ind-card" onclick="showDetail('high-tech')"><i class="bi bi-broadcast-pin"></i><span>High Tech</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSIGHTS -->
+  <section class="content-sec bg-alt">
+    <div class="container">
+      <div class="sec-hd text-center">
+        <span class="sec-tag">Insights</span>
+        <h2 class="sec-h2">Latest from SAP</h2>
+        <p class="sec-sub">Stay ahead with research, trends, and expert perspectives.</p>
+      </div>
+      <div class="row g-4 mt-2">
+        <div class="col-md-6 col-lg-4"><div class="ins-card" onclick="showDetail('gen-ai')"><div class="ins-img" style="background:linear-gradient(135deg,#0070f3,#00b4d8)"><i class="bi bi-cpu"></i></div><div class="ins-body"><span class="ins-tag">AI & Innovation</span><h5>How Generative AI is Reshaping ERP Systems in 2025</h5><p>Explore how embedded AI is transforming decision-making across every enterprise function.</p><span class="ins-more">Read More <i class="bi bi-arrow-right"></i></span></div></div></div>
+        <div class="col-md-6 col-lg-4"><div class="ins-card" onclick="showDetail('sustainability')"><div class="ins-img" style="background:linear-gradient(135deg,#00d4aa,#0070f3)"><i class="bi bi-globe2"></i></div><div class="ins-body"><span class="ins-tag">Sustainability</span><h5>Building a Sustainable Supply Chain with SAP Green Ledger</h5><p>Measure, manage, and reduce your carbon footprint with integrated sustainability tools.</p><span class="ins-more">Read More <i class="bi bi-arrow-right"></i></span></div></div></div>
+        <div class="col-md-6 col-lg-4"><div class="ins-card" onclick="showDetail('cloud-migration')"><div class="ins-img" style="background:linear-gradient(135deg,#8b5cf6,#0070f3)"><i class="bi bi-cloud-haze2-fill"></i></div><div class="ins-body"><span class="ins-tag">Cloud</span><h5>Migration to SAP S/4HANA Cloud: A Comprehensive Guide</h5><p>Step-by-step strategies for a smooth and successful transition to the cloud.</p><span class="ins-more">Read More <i class="bi bi-arrow-right"></i></span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="content-sec" id="aboutSec">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="sec-tag">About SAP</span>
+          <h2 class="sec-h2 mt-2">50+ Years of Enterprise Innovation</h2>
+          <p class="about-p">Founded in 1972, SAP is the world's leading enterprise application software company, helping businesses operate with intelligence and agility across 180+ countries.</p>
+          <div class="row g-3 mt-1">
+            <div class="col-6"><div class="abt-stat"><h3>€33B+</h3><p>Annual Revenue</p></div></div>
+            <div class="col-6"><div class="abt-stat"><h3>105K+</h3><p>Employees Worldwide</p></div></div>
+            <div class="col-6"><div class="abt-stat"><h3>25+</h3><p>Industries Served</p></div></div>
+            <div class="col-6"><div class="abt-stat"><h3>#1</h3><p>ERP Software Globally</p></div></div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="abt-grid">
+            <div class="abt-blk ab1"><i class="bi bi-lightbulb-fill"></i><strong>Innovation</strong><p>7,000+ Patents filed globally</p></div>
+            <div class="abt-blk ab2"><i class="bi bi-globe-americas"></i><strong>Global Reach</strong><p>Operations in 180+ countries</p></div>
+            <div class="abt-blk ab3"><i class="bi bi-award-fill"></i><strong>Recognition</strong><p>Top 10 most valuable brands</p></div>
+            <div class="abt-blk ab4"><i class="bi bi-leaf-fill"></i><strong>Sustainability</strong><p>Carbon neutral since 2023</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-sec">
+    <div class="container text-center">
+      <h2>Ready to Transform Your Business?</h2>
+      <p>Join 440,000+ companies running on SAP — the intelligent enterprise platform.</p>
+      <button class="btn-red btn-lg px-5 mt-4" data-bs-toggle="modal" data-bs-target="#contactModal"><i class="bi bi-headset me-2"></i>Talk to an Expert</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 pb-4">
+        <div class="col-lg-3">
+          <div class="ft-brand"><span class="brand-logo">SAP</span><span class="brand-pipe">|</span><span class="brand-text">Platform</span></div>
+          <p class="ft-desc">The world's leading enterprise software company, helping businesses run intelligently in the digital age.</p>
+          <div class="ft-socials">
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg ft-col">
+          <div class="ft-head">Explore Us</div>
+          <ul class="ft-links">
+            <li><a onclick="showDetail('about-us')">About SAP Platform</a></li>
+            <li><a onclick="showDetail('leadership')">Leadership</a></li>
+            <li><a onclick="showDetail('awards')">Awards & Achievements</a></li>
+            <li><a onclick="showDetail('commitment')">Commitment To People</a></li>
+            <li><a onclick="showDetail('clients')">How We Work With Clients</a></li>
+            <li><a onclick="showDetail('investors')">Investor Relations</a></li>
+            <li><a onclick="showDetail('analyst')">Analyst Recognitions</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg ft-col">
+          <div class="ft-head">Services</div>
+          <ul class="ft-links">
+            <li><a onclick="showDetail('s4hana')">SAP S/4HANA</a></li>
+            <li><a onclick="showDetail('rise-sap')">RISE with SAP</a></li>
+            <li><a onclick="showDetail('grow-sap')">GROW with SAP</a></li>
+            <li><a onclick="showDetail('btp')">Business Technology Platform</a></li>
+            <li><a onclick="showDetail('cloud-trans')">Cloud Transformation</a></li>
+            <li><a onclick="showDetail('hr-trans')">HR Transformation</a></li>
+            <li><a onclick="showDetail('supply-chain')">Supply Chain</a></li>
+            <li><a onclick="showDetail('procurement')">Procurement</a></li>
+            <li><a onclick="showDetail('biz-analytics')">Business Analytics</a></li>
+            <li><a onclick="showDetail('ktern')">KTern.AI</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg ft-col">
+          <div class="ft-head">Industries</div>
+          <ul class="ft-links">
+            <li><a onclick="showDetail('banking')">Banking & Finance</a></li>
+            <li><a onclick="showDetail('healthcare')">Healthcare</a></li>
+            <li><a onclick="showDetail('ind-mfg')">Manufacturing</a></li>
+            <li><a onclick="showDetail('retail')">Retail</a></li>
+            <li><a onclick="showDetail('oil-gas')">Oil, Gas & Energy</a></li>
+            <li><a onclick="showDetail('aerospace')">Aerospace & Defense</a></li>
+            <li><a onclick="showDetail('automotive')">Automotive</a></li>
+            <li><a onclick="showDetail('high-tech')">High Tech</a></li>
+            <li><a onclick="showDetail('govt')">Government</a></li>
+            <li><a onclick="showDetail('insurance')">Insurance</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg ft-col">
+          <div class="ft-head">Insights</div>
+          <ul class="ft-links">
+            <li><a onclick="showDetail('gen-ai')">Generative AI in ERP</a></li>
+            <li><a onclick="showDetail('sustainability')">Sustainability</a></li>
+            <li><a onclick="showDetail('cloud-migration')">Cloud Migration</a></li>
+            <li><a onclick="showDetail('blog')">Blog & Articles</a></li>
+            <li><a onclick="showDetail('case-studies')">Case Studies</a></li>
+            <li><a onclick="showDetail('webinars')">Webinars</a></li>
+            <li><a onclick="showDetail('events')">Events</a></li>
+          </ul>
+          <div class="ft-head mt-3">Careers</div>
+          <ul class="ft-links">
+            <li><a onclick="showDetail('open-positions')">Open Positions</a></li>
+            <li><a onclick="showDetail('culture')">Our Culture</a></li>
+            <li><a onclick="showDetail('benefits')">Employee Benefits</a></li>
+            <li><a onclick="showDetail('graduate')">Graduate Program</a></li>
+            <li><a onclick="showDetail('global-ops')">Global Opportunities</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ft-bottom">
+        <span>© 2025 SAP SE. All rights reserved.</span>
+        <div class="ft-legal"><a href="#">Privacy</a><a href="#">Legal</a><a href="#">Cookie Preferences</a></div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ======== DETAIL PAGE ======== -->
+<div id="detailPage" class="page-section">
+  <div class="dt-hero">
+    <div class="dt-orb dt-o1"></div>
+    <div class="dt-orb dt-o2"></div>
+    <div class="container position-relative">
+      <div class="dt-breadcrumb">
+        <a onclick="goHome()"><i class="bi bi-house-fill"></i> Home</a>
+        <i class="bi bi-chevron-right"></i>
+        <span id="dtParent"></span>
+        <span id="dtCurrWrap"><i class="bi bi-chevron-right"></i><span id="dtCurr"></span></span>
+      </div>
+      <span class="dt-tag" id="dtTag"></span>
+      <h1 class="dt-title" id="dtTitle"></h1>
+      <p class="dt-desc" id="dtDesc"></p>
+      <div class="dt-actions">
+        <button class="btn-red" data-bs-toggle="modal" data-bs-target="#contactModal"><i class="bi bi-headset me-1"></i>Talk to an Expert</button>
+        <button class="btn-out-w" onclick="goHome()"><i class="bi bi-arrow-left me-1"></i>Back to Home</button>
+      </div>
+    </div>
+  </div>
+  <div class="dt-body">
+    <div class="container" id="dtBody"></div>
+  </div>
+</div>
+
+<!-- ======== CONTACT MODAL ======== -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content cm-wrap">
+      <div class="cm-head">
+        <div class="cm-head-left">
+          <div class="cm-icon"><i class="bi bi-headset"></i></div>
+          <div><h5 class="cm-title">Get in Touch</h5><p class="cm-sub">Our team will respond within 24 hours</p></div>
+        </div>
+        <button class="cm-close" data-bs-dismiss="modal"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <div class="cm-body">
+        <div id="cmSuccess" class="cm-success d-none">
+          <div class="cm-success-ico"><i class="bi bi-check-circle-fill"></i></div>
+          <h4>Message Sent!</h4>
+          <p>Thank you for reaching out. Our team will contact you within 24 hours.</p>
+          <button class="btn-red mt-3" id="resetBtn">Send Another Message</button>
+        </div>
+        <form id="cmForm" novalidate>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label class="cm-label">First Name <span class="req">*</span></label>
+              <input type="text" class="cm-input" id="cmFname" placeholder="Enter first name" required/>
+              <div class="cm-err">Please enter your first name.</div>
+            </div>
+            <div class="col-sm-6">
+              <label class="cm-label">Last Name <span class="req">*</span></label>
+              <input type="text" class="cm-input" id="cmLname" placeholder="Enter last name" required/>
+              <div class="cm-err">Please enter your last name.</div>
+            </div>
+            <div class="col-sm-6">
+              <label class="cm-label">Email Address <span class="req">*</span></label>
+              <input type="email" class="cm-input" id="cmEmail" placeholder="name@company.com" required/>
+              <div class="cm-err">Please enter a valid email.</div>
+            </div>
+            <div class="col-sm-6">
+              <label class="cm-label">Contact Number <span class="req">*</span></label>
+              <input type="tel" class="cm-input" id="cmPhone" placeholder="+1 234 567 890" required/>
+              <div class="cm-err">Please enter a valid number.</div>
+            </div>
+            <div class="col-sm-6">
+              <label class="cm-label">Country <span class="req">*</span></label>
+              <select class="cm-input cm-select" id="cmCountry" required>
+                <option value="">Select country...</option>
+                <option>Australia</option><option>Austria</option><option>Bangladesh</option>
+                <option>Belgium</option><option>Brazil</option><option>Canada</option>
+                <option>China</option><option>Denmark</option><option>Egypt</option>
+                <option>Finland</option><option>France</option><option>Germany</option>
+                <option>India</option><option>Indonesia</option><option>Ireland</option>
+                <option>Italy</option><option>Japan</option><option>Kenya</option>
+                <option>Malaysia</option><option>Mexico</option><option>Netherlands</option>
+                <option>New Zealand</option><option>Nigeria</option><option>Norway</option>
+                <option>Pakistan</option><option>Philippines</option><option>Poland</option>
+                <option>Qatar</option><option>Saudi Arabia</option><option>Singapore</option>
+                <option>South Africa</option><option>South Korea</option><option>Spain</option>
+                <option>Sweden</option><option>Switzerland</option><option>Thailand</option>
+                <option>Turkey</option><option>United Arab Emirates</option>
+                <option>United Kingdom</option><option>United States</option><option>Vietnam</option>
+              </select>
+              <div class="cm-err">Please select your country.</div>
+            </div>
+            <div class="col-sm-6">
+              <label class="cm-label">Company Name <span class="opt">(Optional)</span></label>
+              <input type="text" class="cm-input" id="cmCompany" placeholder="Your company"/>
+            </div>
+            <div class="col-12">
+              <label class="cm-label">How Can We Help You? <span class="req">*</span></label>
+              <textarea class="cm-input cm-textarea" id="cmMsg" placeholder="Tell us about your project or question..." required></textarea>
+              <div class="cm-err">Please describe how we can help.</div>
+            </div>
+            <div class="col-12">
+              <div class="cm-check-row">
+                <input type="checkbox" id="cmPrivacy" class="cm-checkbox" required/>
+                <label for="cmPrivacy">I agree to the <a href="#" class="cm-link">Privacy Policy</a> and consent to SAP Platform contacting me about its products and services.</label>
+              </div>
+              <div class="cm-err" id="privErr" style="display:none">Please agree to the Privacy Policy.</div>
+            </div>
+          </div>
+          <div class="cm-footer">
+            <button type="button" class="btn-ghost-modal" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn-red cm-submit" id="cmSubmit">
+              <span id="cmSubmitTxt"><i class="bi bi-send-fill me-1"></i>Send Message</span>
+              <span id="cmSubmitSpin" class="d-none"><span class="spinner-border spinner-border-sm me-1"></span>Sending...</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a href="#" class="btt-btn" id="bttBtn" onclick="goHome();return false;"><i class="bi bi-arrow-up"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="Main.JS"></script>
+</body>
+</html>
