@@ -291,7 +291,7 @@ button{cursor:pointer}
 .btt-btn:hover{transform:translateY(-2px);color:#fff}
 
 /* RESPONSIVE */
-@media(max-width:991px){
+/* @media(max-width:991px){
   .nav-menu{display:none}
   .mob-toggle{display:flex}
   .ptabs-wrapper{flex-direction:column}
@@ -300,6 +300,63 @@ button{cursor:pointer}
   .abt-grid{grid-template-columns:1fr 1fr}
   .mega-col-grid{grid-template-columns:1fr}
   .mega-card-grid{grid-template-columns:1fr 1fr}
+} */
+ /* MOBILE NAVIGATION FIX */
+
+@media(max-width:991px){
+
+.nav-inner{
+flex-wrap:wrap;
+}
+
+.nav-menu{
+position:absolute;
+top:60px;
+left:0;
+width:100%;
+background:#ffffff;
+flex-direction:column;
+align-items:flex-start;
+display:none;
+padding:15px;
+height:auto;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.nav-menu.active{
+display:flex;
+}
+
+.nav-menu li{
+width:100%;
+}
+
+.nav-btn{
+width:100%;
+justify-content:space-between;
+padding:12px 0;
+}
+
+.mega-panel{
+position:relative;
+top:0;
+box-shadow:none;
+border:none;
+}
+
+.nav-cta{
+display:none;
+}
+
+.btn-region{
+display:none;
+}
+
+.mob-toggle{
+display:block;
+margin-left:auto;
+}
+
 }
 @media(max-width:576px){
   .content-sec{padding:50px 0}

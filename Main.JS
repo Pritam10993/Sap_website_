@@ -846,3 +846,24 @@ const PAGES = {
     document.getElementById('resetBtn')?.addEventListener('click', resetForm);
     document.getElementById('contactModal')?.addEventListener('hidden.bs.modal', resetForm);
   });
+
+// ---------------------------------------------------------------------
+/* MOBILE MENU */
+
+const mobToggle = document.getElementById("mobToggle");
+const navMenu = document.getElementById("navMenu");
+const mobIcon = document.getElementById("mobIcon");
+
+mobToggle.addEventListener("click", function(){
+
+navMenu.classList.toggle("active");
+
+if(navMenu.classList.contains("active")){
+mobIcon.classList.remove("bi-list");
+mobIcon.classList.add("bi-x-lg");
+}else{
+mobIcon.classList.remove("bi-x-lg");
+mobIcon.classList.add("bi-list");
+}
+
+});
