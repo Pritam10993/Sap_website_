@@ -301,6 +301,9 @@ button{cursor:pointer}
   .mega-col-grid{grid-template-columns:1fr}
   .mega-card-grid{grid-template-columns:1fr 1fr}
 } */
+
+
+ /* --------------------------------------- */
  /* MOBILE NAVIGATION FIX */
 
 @media(max-width:991px){
@@ -358,6 +361,7 @@ margin-left:auto;
 }
 
 }
+/* ---------------------------------------- */
 @media(max-width:576px){
   .content-sec{padding:50px 0}
   .hero-h1{font-size:1.9rem}
