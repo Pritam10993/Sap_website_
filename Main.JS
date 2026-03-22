@@ -867,3 +867,20 @@ mobIcon.classList.add("bi-list");
 }
 
 });
+/* =================================
+   MOBILE MEGA MENU CLICK
+================================= */
+
+document.querySelectorAll(".has-mega").forEach(menu => {
+
+menu.addEventListener("click", function(){
+
+if(window.innerWidth < 992){
+
+this.classList.toggle("open");
+
+}
+
+});
+
+});
