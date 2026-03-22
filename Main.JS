@@ -884,3 +884,28 @@ this.classList.toggle("open");
 });
 
 });
+/* MOBILE MEGA MENU FIX */
+
+document.querySelectorAll(".has-mega .nav-btn").forEach(btn=>{
+
+btn.addEventListener("click",function(e){
+
+if(window.innerWidth < 992){
+
+e.preventDefault();
+
+const parent = this.parentElement;
+
+document.querySelectorAll(".has-mega").forEach(item=>{
+if(item!==parent){
+item.classList.remove("open");
+}
+});
+
+parent.classList.toggle("open");
+
+}
+
+});
+
+});
